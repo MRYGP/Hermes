@@ -1,0 +1,13 @@
+# Local and generated files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Editor state
+.vscode/
+.idea/
+
+# Agent/session scratch
+.cache/
+tmp/
