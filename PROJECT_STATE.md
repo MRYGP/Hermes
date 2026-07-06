@@ -25,6 +25,7 @@ SK Agent OS 学习台
 - 增加 Codex 协作入口 `AGENTS.md`。
 - 增加 ChatGPT Project 同步协议与知识库清单。
 - 增加第一批 examples。
+- 完成第 1 天学习记录：`logs/2026-07/day01_为什么还要学Hermes.md`。
 
 ## 当前未决问题
 
@@ -34,7 +35,7 @@ SK Agent OS 学习台
 
 ## 下一步动作
 
-1. 按 `docs/06_7到14天学习计划.md` 执行第 1 天任务。
+1. 执行第 2 天任务：起草 SK 仓库专用 AGENTS.md 大纲。
 2. 把 `project/ChatGPT_Project_Setup.md` 中的指令复制到 ChatGPT Project。
 3. 按 `project/Knowledge_Files_Checklist.md` 上传第一批稳定知识文件。
 
