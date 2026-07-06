@@ -10,4 +10,5 @@ Thumbs.db
 
 # Agent/session scratch
 .cache/
+.agents/
 tmp/

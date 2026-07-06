@@ -13,14 +13,29 @@
 - `docs/04_SK_仓库实战映射.md`
 - `docs/07_记忆技能规则边界.md`
 - `docs/08_排错与省Token手册.md`
+- `docs/09_官方资料索引与复核清单.md`
+- `project/Repository_Knowledge_Sync_Protocol.md`
 - `templates/skill_template.md`
 - `templates/quick_command_template.md`
 - `templates/automation_audit_template.md`
+- `examples/01_sk_state_drift_audit_skill.md`
+- `examples/02_sk_status_brief_quick_command.md`
+- `examples/03_daily_status_drift_audit_automation.md`
+
+## 按需上传
+
+这些文件不建议作为长期稳定知识，但可以在每次 Project 会话开始时上传或粘贴，用来同步当前进度：
+
+- `PROJECT_STATE.md`
+- 当前正在修改的具体文档
+- 本轮 Codex 生成的 diff 摘要
 
 ## 暂不推荐上传
 
 暂不推荐长期上传：
 
+- `logs/`
+- `archive/`
 - 高频变化的项目看板。
 - 每日任务状态。
 - 每周扫描结果。
@@ -47,3 +62,17 @@
 3. 它是否包含过期风险很高的信息？
 4. 它是否会让 GPT 把旧状态当真？
 5. 它是否应该留在本地仓库，由 Codex 读取，而不是放进知识库？
+
+## 上传分层
+
+### 稳定知识层
+
+用于长期理解项目。上传后可以较长时间不变，但每 30 天仍需复核外部工具判断。
+
+### 当前状态层
+
+用于理解当前进度。以 `PROJECT_STATE.md` 为入口，每次关键修改后更新，不应被当成长期知识。
+
+### 工作日志层
+
+用于保留学习过程。默认不上传 Project，不作为回答事实来源。

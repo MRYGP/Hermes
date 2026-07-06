@@ -4,7 +4,7 @@
 
 修订后的正式设计稿见：
 
-- [project/SK_Agent_OS_学习台_GPTS_设计稿.md](project/SK_Agent_OS_学习台_GPTS_设计稿.md)
+- [../project/SK_Agent_OS_学习台_GPTS_设计稿.md](../project/SK_Agent_OS_学习台_GPTS_设计稿.md)
 
 ## 修订要点
 
