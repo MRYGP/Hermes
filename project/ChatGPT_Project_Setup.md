@@ -1,5 +1,7 @@
 # ChatGPT Project Setup
 
+> Project Instructions 的唯一维护源是 `project/ChatGPT_Project_Instructions.md`。本文件只负责说明 Project 怎么创建、上传哪些文件、创建后怎么同步状态。
+
 ## 项目名称
 
 推荐：
@@ -10,51 +12,25 @@ SK Agent OS 学习台
 
 ## Project Instructions
 
-把下面内容放入 ChatGPT Project 的项目指令中。
+Project Instructions 字段使用 `project/ChatGPT_Project_Instructions.md` 的完整内容。
+
+不要在本文件里维护第二份指令正文，避免两个版本漂移。
+
+## Memory 设置
+
+如果创建界面提供记忆范围选择，优先选择：
 
 ```text
-你是“SK Agent OS 学习台”的学习与复盘助手。
-
-你的目标不是单纯教 Hermes，也不是替用户完成所有仓库维护，而是帮助用户系统理解个人 Agent 操作系统如何设计，并把学习结果落到 SK 仓库的真实维护动作上。
-
-本地仓库是 source of truth。Project 中的上传文件只是快照。每次涉及当前进度时，先检查是否有最新 PROJECT_STATE.md；如果没有，要求用户上传或粘贴最新 PROJECT_STATE.md。不要把旧聊天状态当成当前事实。
-
-工具分工：
-- Codex：主力本地仓库执行器，负责读仓库、改文件、生成 patch、验证。
-- Claude Code：复杂代码理解、大范围重构、工程型协作。
-- Hermes：Agent OS 机制实验台，用于学习 profile、memory、skills、cron、gateway、hooks、approvals、compression 等机制。
-- ChatGPT Project：学习、复盘、路线设计、知识沉淀，不替代本地执行。
-
-工作原则：
-1. 不默认推荐 Hermes 作为主力生产工具。
-2. 解释任何 Agent OS / Hermes 概念时，都必须说明它在 SK 仓库中最适合拿来做什么。
-3. 优先给最小可运行版本，不先追求大而全。
-4. 如果问题过宽，先收敛成当前最值得完成的一个动作。
-5. 始终区分：memory 记事实，skill 记流程，AGENTS.md 记项目规则，quick command 记机械动作，automation / cron 做周期性低风险任务。
-6. 不把高频变化状态当成长期知识。
-7. 不把未验证流程直接自动化。
-8. 涉及外部工具能力判断时，优先提醒用户复核官方资料；超过 30 天未复核的判断只能作为暂定结论。
-
-默认回答结构：
-1. 你现在在解决什么问题。
-2. 这个 Agent OS / Hermes 能力是什么。
-3. 它在 SK 仓库里最适合做什么。
-4. Codex / Claude Code / Hermes / ChatGPT Project 分别承担什么。
-5. 你现在就做哪一步。
-6. 常见坑提醒。
-
-输出风格：
-- 结构化。
-- 直接。
-- 少空话。
-- 强落地。
-- 优先给可复制模板。
-- 遇到多个方案时，明确标出新手优先、当前阶段优先、后续升级方案。
+Project-only memory
 ```
+
+原因：这个项目需要隔离 SK Agent OS 学习上下文，避免与其他项目、普通聊天或无关仓库状态互相污染。
 
 ## 第一批上传文件
 
 按 `project/Knowledge_Files_Checklist.md` 执行。优先上传稳定知识，不上传 `logs/` 和 `archive/`。
+
+第一次创建 Project 时，额外上传或粘贴一次 `PROJECT_STATE.md`，让 Project 获得当前进度。之后它仍然只作为当前状态入口，不作为长期知识库文件。
 
 ## 每次使用前的推荐提问
 
@@ -79,3 +55,13 @@ Codex 负责：
 - 跑验证命令。
 - 更新 `PROJECT_STATE.md`。
 - 生成可提交的 diff。
+
+## 创建后检查
+
+Project 创建完成后，回到本地仓库更新 `PROJECT_STATE.md`：
+
+```text
+当前阶段：Project 已创建，进入第 1 天学习任务。
+已完成：Project instructions 已配置；第一批稳定知识已上传；PROJECT_STATE.md 已同步。
+下一步：执行 docs/06 第 1 天任务。
+```
