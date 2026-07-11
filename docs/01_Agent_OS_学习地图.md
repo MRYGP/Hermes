@@ -18,12 +18,12 @@
 | 记忆层 | 长期事实、偏好、稳定背景 | memory、知识库、项目文档 |
 | 规则层 | 项目约束、执行边界、验证方式 | AGENTS.md、CLAUDE.md、仓库规范 |
 | 技能层 | 可复用流程 | skills、slash commands、quick commands |
-| 工具层 | 读写文件、调用 API、跑命令 | MCP、shell、connectors、gateway |
-| 调度层 | 定时任务、周期审计、后台检查 | cron、automations、scheduled tasks |
-| 安全层 | 审批、hook、sandbox、权限边界 | approvals、hooks、sandbox |
+| 工具层 | 读写文件、调用 API、跑命令 | MCP、shell、Apps、gateway |
+| 调度层 | 定时任务、周期审计、后台检查 | cron、automations、Scheduled Tasks |
+| 安全层 | 审批、hook、sandbox、权限边界 | approvals、hooks、sandbox、permissions |
 | 成本层 | 上下文压缩、模型选择、文件裁剪 | compression、prompt-size、fallback model |
 
-## 学习顺序
+## 稳定学习顺序
 
 1. 先理解 project instructions / AGENTS.md：固定边界。
 2. 再理解 skills / quick commands：固定动作。
@@ -32,11 +32,41 @@
 5. 再理解 cron / gateway / automations：固定调度。
 6. 最后理解 compression / fallback：固定成本。
 
+## 当前 v2 学习路径
+
+当前产品实践线：
+
+```text
+Chat / Work / Project / Codex
+-> Plugins / Apps
+-> Scheduled Tasks
+-> 权限、审批和上下文同步
+```
+
+机制理解线：
+
+```text
+memory
+-> skills
+-> AGENTS.md
+-> approvals / hooks
+-> automation / cron
+-> compression
+```
+
+落地线：
+
+```text
+把以上能力映射到 SK 仓库中的真实动作。
+```
+
+产品 surface 会变。Agent OS 的结构问题相对稳定。
+
 ## Hermes 在这张图里的位置
 
 Hermes 的价值在于它把很多 Agent OS 机制放在一起：profile、memory、skills、cron、gateway、hooks、MCP、compression、provider 策略等。
 
-所以 Hermes 适合作为学习样本。
+所以 Hermes 适合作为机制教材与对照实验台。
 
 但具体干活时，Codex 和 Claude Code 通常更适合作为执行器。
 

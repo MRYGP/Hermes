@@ -2,6 +2,14 @@
 
 这份文档只记录第一阶段需要学的 Hermes 概念。目标是可迁移，不是覆盖全部功能。
 
+## 当前定位说明
+
+Hermes 当前作为 Agent OS 机制教材与对照实验台。
+
+学习 Hermes 的目标不是用它替代 ChatGPT、Codex 或 Claude Code，而是理解 profile、memory、skills、cron、gateway、hooks、approvals、compression 等机制如何组合。
+
+当前 ChatGPT 产品能力与 Hermes 机制的阶段性对照，见 [docs/10_ChatGPT_工作台能力地图.md](10_ChatGPT_工作台能力地图.md)。
+
 ## profile
 
 profile 是一个 agent 的隔离空间。

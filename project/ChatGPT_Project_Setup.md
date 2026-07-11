@@ -1,6 +1,8 @@
 # ChatGPT Project Setup
 
-> Project Instructions 的唯一维护源是 `project/ChatGPT_Project_Instructions.md`。本文件只负责说明 Project 怎么创建、上传哪些文件、创建后怎么同步状态。
+> `project/ChatGPT_Project_Instructions.md` 是 Project instructions 的唯一维护源。
+>
+> 本文件只负责说明如何创建 Project、配置 memory、复制 instructions、上传知识文件、上传当前状态和做配置验收。
 
 ## 项目名称
 
@@ -26,17 +28,21 @@ Project-only memory
 
 原因：这个项目需要隔离 SK Agent OS 学习上下文，避免与其他项目、普通聊天或无关仓库状态互相污染。
 
-## 第一批上传文件
+## 知识文件上传
 
-按 `project/Knowledge_Files_Checklist.md` 执行。优先上传稳定知识，不上传 `logs/` 和 `archive/`。
+按 `project/Knowledge_Files_Checklist.md` 执行。
 
-第一次创建 Project 时，额外上传或粘贴一次 `PROJECT_STATE.md`，让 Project 获得当前进度。之后它仍然只作为当前状态入口，不作为长期知识库文件。
+优先上传长期稳定知识。阶段性、需替换知识可以上传，但产品能力变化或阶段结束后需要替换。
 
-## 每次使用前的推荐提问
+不要上传 `logs/`、`archive/`、每日 git 输出、临时研究材料或未验证实验结果。
 
-```text
-请先基于我上传的 PROJECT_STATE.md 判断当前阶段，然后告诉我现在最值得做的一个动作。
-```
+## 当前状态同步
+
+第一次创建 Project 时，额外上传或粘贴一次 `PROJECT_STATE.md`，让 Project 获得当前进度。
+
+之后每次结构性修改后，都应上传最新版 `PROJECT_STATE.md` 或粘贴其关键内容。
+
+`PROJECT_STATE.md` 是当前状态入口，不属于长期稳定知识库。
 
 ## Project 与 Codex 的交接方式
 
@@ -56,12 +62,19 @@ Codex 负责：
 - 更新 `PROJECT_STATE.md`。
 - 生成可提交的 diff。
 
-## 创建后检查
+## 配置验收问题
 
-Project 创建完成后，回到本地仓库更新 `PROJECT_STATE.md`：
+配置完成后，开一个新会话测试：
 
 ```text
-当前阶段：Project 已创建，进入第 1 天学习任务。
-已完成：Project instructions 已配置；第一批稳定知识已上传；PROJECT_STATE.md 已同步。
-下一步：执行 docs/06 第 1 天任务。
+请先检查是否有最新版 PROJECT_STATE.md。
+
+然后回答：
+
+1. 本仓库的长期定位是什么。
+2. 当前 v2 阶段优先学习什么。
+3. “ChatGPT 工作台”是否为官方产品名称。
+4. Hermes 当前承担什么角色。
+5. 当前状态以哪个文件为准。
+6. 现在最值得做的一个动作是什么。
 ```
