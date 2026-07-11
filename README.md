@@ -51,6 +51,7 @@ Hermes 保留为 Agent OS 机制教材与对照实验台，不默认作为主力
 │   ├── ChatGPT_Project_Instructions.md
 │   ├── ChatGPT_Project_Setup.md
 │   ├── Knowledge_Files_Checklist.md
+│   ├── SK_Agent_OS_学习台_GPTS_设计稿.md
 │   └── Repository_Knowledge_Sync_Protocol.md
 ├── templates/
 ├── examples/
